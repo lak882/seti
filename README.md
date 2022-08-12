@@ -81,8 +81,8 @@ Add an &lt;Extension&gt; tag before adding the tag for the extension. <br>
 Requires a "Z" before the name of the custom SDA. This avoids conflicts with already existing fields. <br>
 <a href=""><img src="screenshots/patient/2.png" width="500"></a>
 ## Test Patient
-In the [SETI Test Patient](https://github.com/lak882/seti-test-patient) repository, we have provided patient files. They can be imported by moving them into the {name of UCR instance}/Data/HSEDGE1/SDAIn/. 
-<br> If you move the patients into a new folder {name of UCR instance}/Data/Test, then patients can be imported using the following: 
+In the [SETI Test Patient](https://github.com/lak882/seti-test-patient) repository, we have provided patient files. They can be imported by moving them into the {UCR folder}/Data/HSEDGE1/SDAIn/. 
+<br> If you move the patients into a new folder called {UCR folder}/Data/Test, then patients can be imported using the following: 
 ```
 HSCUSTOM> do ##class(Demo.Patient).TestPatient("Base")
 HSCUSTOM> do ##class(Demo.Patient).TestPatient("Final")
