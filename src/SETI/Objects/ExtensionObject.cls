@@ -1,0 +1,57 @@
+/// Stores extension objects on the dashboard.
+Class SETI.Objects.ExtensionObject Extends %Persistent
+{
+
+Property SDA As %String;
+
+Property PropertyName As %String;
+
+Property PropertyType As %String;
+
+Property HealthInsight As %Boolean;
+
+Property ClinicalViewer As %Boolean;
+
+Method %OnNew(sda As %String, propertyName As %String, propertyType As %String, healthInsight As %Boolean, clinicalViewer As %Boolean) As %Status
+{
+    set ..SDA = sda
+    set ..PropertyName = propertyName 
+    set ..PropertyType = propertyType
+    set ..HealthInsight = healthInsight 
+    set ..ClinicalViewer = clinicalViewer
+
+    set valid = ..%ValidateObject()
+    return valid
+}
+
+Storage Default
+{
+<Data name="ExtensionObjectDefaultData">
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>SDA</Value>
+</Value>
+<Value name="3">
+<Value>PropertyName</Value>
+</Value>
+<Value name="4">
+<Value>PropertyType</Value>
+</Value>
+<Value name="5">
+<Value>HealthInsight</Value>
+</Value>
+<Value name="6">
+<Value>ClinicalViewer</Value>
+</Value>
+</Data>
+<DataLocation>^SETI.Objects.ExtensionObjectD</DataLocation>
+<DefaultData>ExtensionObjectDefaultData</DefaultData>
+<IdLocation>^SETI.Objects.ExtensionObjectD</IdLocation>
+<IndexLocation>^SETI.Objects.ExtensionObjectI</IndexLocation>
+<StreamLocation>^SETI.Objects.ExtensionObjectS</StreamLocation>
+<Type>%Storage.Persistent</Type>
+}
+
+}

@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="dc-sample-template.ZPM">
+  <Document name="seti.ZPM">
     <Module>
-      <Name>dc-sample-template</Name>
-      <Version>1.1.0</Version>
-      <Description>A basic module template for InterSystems ObjectScript with Unittests</Description>
+      <Name>seti</Name>
+      <Version>1.0.0</Version>
+      <Description>SDA Extension Tool</Description>
+      <Keywords>SDA</Keywords>
+      <Author>
+        <Person>Louis Kabelka</Person>
+        <Organization>InterSystems</Organization>
+        <CopyrightDate>2022</CopyrightDate>
+      </Author>
       <Packaging>module</Packaging>
-      <SourcesRoot>src/iris</SourcesRoot>
-      <Resource Name="dc.sample.PKG"/>
-      <UnitTest Name="/tests" Package="dc.sample.unittests" Phase="test"/>
-    </Module>
+      <Default Name="count" Value="7" />       
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="SETI.PKG"/>
+
+      <!-- REST Api -->
+      <CSPApplication 
+        Url="/dispatch"
+        MatchRoles=":%All"
+        PasswordAuthEnabled="0"
+        UnauthenticatedEnabled="1"
+        DispatchClass="SETI.Dispatch"
+        CookiePath="/dispatch/"
+        UseCookies="2"
+      />
+
+      <!-- CSP page that we view SETI on-->
+      <CSPApplication
+        Url="/seti"
+        MatchRoles=":%All"
+        SourcePath="/src/sda-studio"
+        DeployPath="${cspdir}sda-studio"
+        ServeFiles="1"
+        Recurse="1"
+        CookiePath="/seti/"
+        UseCookies="2"
+        PasswordAuthEnabled="0"
+        UnauthenticatedEnabled="1"
+      />
+
+     <!-- Adds globals, mappings etc.-->
+      <Invokes>
+        <Invoke Class="SETI.Setup.Install" Method="Install"></Invoke>
+        <Invoke Class="SETI.Setup.Ports" Method="SetPorts"></Invoke>
+      </Invokes>
+
+    </Module>    
   </Document>
 </Export>
+

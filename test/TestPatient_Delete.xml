@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<Container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:isc="http://extension-functions.intersystems.com">
+<EventDescription>ADT_A29</EventDescription>
+<SendingFacility>SDA</SendingFacility>
+<Patient>
+<PatientNumbers>
+<PatientNumber>
+<Number>53-17-66</Number>
+<NumberType>MRN</NumberType>
+<Organization>
+<Code>PHC</Code>
+</Organization>
+</PatientNumber>
+</PatientNumbers>
+<Name>
+<GivenName>Steve</GivenName>
+<FamilyName>Burns</FamilyName>
+</Name>
+<BirthTime>2005-02-13T00:00:00</BirthTime>
+<Gender>
+<Code>M</Code>
+</Gender>
+<EnteredAt>
+<Code>PHC</Code>
+</EnteredAt>
+</Patient>
+<Action>DeletePatient</Action>
+</Container>

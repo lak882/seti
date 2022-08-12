@@ -1,0 +1,36 @@
+<div>
+    <h1 color="basic">Custom SDA Property</h1>
+</div>
+  
+<div>
+    <mat-form-field appearance="outline">
+      <mat-label>Custom SDA</mat-label>
+      <mat-select [(ngModel)]="sdaInput">
+        <mat-option *ngFor="let custom of sda.customSDAList" value="{{custom}}">{{custom}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Property Name</mat-label>
+      <input matInput id="propertyName" autocomplete="off">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Property Type</mat-label>
+      <mat-select [(ngModel)]="propertyType">
+        <mat-option *ngFor="let type of sda.propertyTypes" value="{{type}}">{{type}}</mat-option>
+      </mat-select> 
+    </mat-form-field>
+</div>
+
+<div>
+    <section class="check-section">
+        <mat-checkbox id="hi" class="check-margin">Health Insight</mat-checkbox>
+        <mat-checkbox id="cv" class="check-margin">Clinical Viewer</mat-checkbox>
+    </section>     
+</div>
+
+<div>
+    <button (click)="propertyInput()" mat-flat-button>Add Property</button>
+</div>
+  

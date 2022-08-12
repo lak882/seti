@@ -1,0 +1,159 @@
+<div class="dashboard">
+    <h1 style="margin-top: 1em; margin-left: 17em;" color="basic" >Dashboard</h1>
+    <span class="spacer"></span>
+    <mat-form-field style="margin-left: 3em;" appearance="outline">
+      <mat-label>Select Dashboard</mat-label>
+      <mat-select (selectionChange)="selectDashboard()" [(ngModel)]="dashboard">
+        <mat-option *ngFor="let dashboard of this.dashboardList" value="{{dashboard}}">{{dashboard}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+
+<div class="dashboard" id="Extend SDA">
+  <table mat-table [dataSource]="extension" class="mat-elevation-z0 table-bordered">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <ng-container matColumnDef="sda">
+        <th mat-header-cell *matHeaderCellDef>SDA</th>
+        <td mat-cell *matCellDef="let element"> {{element.sda}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="hi">
+        <th mat-header-cell *matHeaderCellDef>Health Insight</th>
+        <td mat-cell *matCellDef="let element"> {{element.hi}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cv">
+        <th mat-header-cell *matHeaderCellDef>Clinical Viewer</th>
+        <td mat-cell *matCellDef="let element"> {{element.cv}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="propertyName">
+        <th mat-header-cell *matHeaderCellDef>Property Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.propertyName}} </td>
+      </ng-container>
+
+      
+      <ng-container matColumnDef="propertyType">
+        <th mat-header-cell *matHeaderCellDef>Property Type</th>
+        <td mat-cell *matCellDef="let element"> {{element.propertyType}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td style="text-align: right;" mat-cell *matCellDef="let element"> 
+          <button style="line-height: 25px; margin-top: 0.5em; margin-bottom: 0.5em;" (click)="deleteSDAInput()" mat-flat-button>Delete</button> 
+        </td>
+      </ng-container>
+
+      <tr class="table-row" mat-header-row *matHeaderRowDef="displayExtension"></tr>
+      <tr class="table-row" mat-row *matRowDef="let row; columns: displayExtension;"></tr>
+    </table>
+</div>
+
+<div class="dashboard" id="Custom SDA">
+    <table mat-table [dataSource]="custom" class="mat-elevation-z0 table-bordered">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <ng-container matColumnDef="sda">
+          <th mat-header-cell *matHeaderCellDef>Custom SDA</th>
+          <td mat-cell *matCellDef="let element"> {{element.sda}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="hi">
+          <th mat-header-cell *matHeaderCellDef>Health Insight</th>
+          <td mat-cell *matCellDef="let element"> {{element.hi}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cv">
+          <th mat-header-cell *matHeaderCellDef>Clinical Viewer</th>
+          <td mat-cell *matCellDef="let element"> {{element.cv}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="infotype">
+          <th mat-header-cell *matHeaderCellDef>Infotype</th>
+          <td mat-cell *matCellDef="let element"> {{element.infotype}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="dateProperty">
+          <th mat-header-cell *matHeaderCellDef>Date Property</th>
+          <td mat-cell *matCellDef="let element"> {{element.dateProperty}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="matchings">
+          <th mat-header-cell *matHeaderCellDef>Matchings</th>
+          <td mat-cell *matCellDef="let element"> {{element.matchings}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="customPlural">
+          <th mat-header-cell *matHeaderCellDef>Custom Plural</th>
+          <td mat-cell *matCellDef="let element"> {{element.customPlural}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td style="text-align: right;" mat-cell *matCellDef="let element"> 
+            <button style="line-height: 25px; margin-top: 0.5em; margin-bottom: 0.5em;" (click)="deleteSDAInput()" mat-flat-button>Delete</button> 
+          </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="info">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+
+        <tr class="table-row" mat-header-row *matHeaderRowDef="displayCustom"></tr>
+        <tr class="table-row" mat-row *matRowDef="let row; columns: displayCustom;"></tr>
+      </table>
+</div>
+
+<div class="dashboard" id="Custom SDA Property">
+  <table mat-table [dataSource]="property" class="mat-elevation-z0 table-bordered">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <ng-container matColumnDef="sda">
+        <th mat-header-cell *matHeaderCellDef>Custom SDA</th>
+        <td mat-cell *matCellDef="let element"> {{element.sda}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="hi">
+        <th mat-header-cell *matHeaderCellDef>Health Insight</th>
+        <td mat-cell *matCellDef="let element"> {{element.hi}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cv">
+        <th mat-header-cell *matHeaderCellDef>Clinical Viewer</th>
+        <td mat-cell *matCellDef="let element"> {{element.cv}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="propertyName">
+        <th mat-header-cell *matHeaderCellDef>Property Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.propertyName}} </td>
+      </ng-container>
+
+      
+      <ng-container matColumnDef="propertyType">
+        <th mat-header-cell *matHeaderCellDef>Property Type</th>
+        <td mat-cell *matCellDef="let element"> {{element.propertyType}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td style="text-align: right;" mat-cell *matCellDef="let element"> 
+          <button style="line-height: 25px; margin-top: 0.5em; margin-bottom: 0.5em;" (click)="deleteSDAInput()" mat-flat-button>Delete</button> 
+        </td>
+      </ng-container>
+
+      <tr class="table-row" mat-header-row *matHeaderRowDef="displayProperty"></tr>
+      <tr class="table-row" mat-row *matRowDef="let row; columns: displayProperty;"></tr>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+<div>
+    <h1 color="basic">Custom SDA</h1>
+</div>
+  
+<div>
+    <mat-form-field appearance="outline">
+        <mat-label>SDA</mat-label>
+        <input matInput id="sda">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Custom Plural (optional)</mat-label>
+        <input matInput id="customPlural" value="">
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance="outline">
+        <mat-label>Infotype</mat-label>
+        <input matInput id="infotype" (change)="setMatchings()" autocomplete="off">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Date Property</mat-label>
+        <input matInput id="dateProperty" (change)="setMatchings()" autocomplete="off">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Matchings</mat-label>
+        <input matInput id="matchings" autocomplete="off">
+    </mat-form-field>
+</div>
+
+<div>
+    <section class="check-section">
+        <mat-checkbox id="hi" class="check-margin">Health Insight</mat-checkbox>
+        <mat-checkbox id="cv" class="check-margin">Clinical Viewer</mat-checkbox>
+    </section>      
+</div>
+
+<div>
+    <button mat-flat-button (click)="customSDAInput()">Add Custom SDA</button>
+</div>

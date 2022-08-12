@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-typography: mat-typography-config($font-family: 'Futura,Arial,sans-serif;');
+@include angular-material-typography($custom-typography);
+
+$my-primary: mat.define-palette($mat-cyan, 800);
+$my-accent:  mat.define-palette($mat-cyan, 400);
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ )
+));
+@include mat.all-component-themes($my-theme);
+
+
+/* Application-wide Styles */
+body, input[type="text"], button {
+  background-color: #EDECE4;
+  // background-color: #82dedb;
+}
+
+.mat-flat-button {
+  color: #333695!important;
+  background: #ffffff;
+  border: 2px solid #333695 !important;
+  border-radius: 4px;
+}
+
+.mat-input-element {
+  color: #000000 !important;
+}
+
+/* everywhere else */
+html, body { height: 100%; }
+body { margin: 0 }
+
+
+

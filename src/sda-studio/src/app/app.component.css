@@ -1,0 +1,22 @@
+/* AppComponent's private CSS styles */
+.spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar {
+    background-color: rgb(255, 255, 255)!important;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 12%);
+}
+
+.toolbar-icons {
+    color: #00AFA9;
+    font-family: Montserrat,Futura,Arial,sans-serif;
+    font-size: 36px;
+    text-align: left;
+    margin-right: 0.5em;
+    outline: none;
+}
+
+button {
+    margin-right: 1em;
+}
