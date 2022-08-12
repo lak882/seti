@@ -1,17 +1,17 @@
-<h1>
+<h1 align="center">
   <br>
   <a href=""><img src="logo/Logo_h256.png" height="100"></a>
 </h1>
 
-<h4>An easy to use SDA extension UI</h4>
+<h4 align="center">An easy to use SDA extension UI</h4>
       
-* <a href="#quick-start-guide">Quick Start</a> <br>
-* <a href="#sda-studio">SDA Studio</a> <br>
-* <a href="#adding-patients-with-sda-extensions">Adding Patients</a> <br>
-* <a href="#viewing-sda-extensions-in-health-insight">Health Insight</a> <br>
-* <a href="#viewing-sda-extensions-in-clinical-viewer">Clinical Viewer</a> <br>
-* <a href="#technical-overview">Technical Overview</a> <br>
-* <a href="#class-reference">Class Reference</a>
+* [Quick Start Guide](#quick-start-guide)
+* [SDA Studio](#sda-studio)
+* [Importing Patients](#importing-patients-with-sda-extensions)
+* [Health Insight](#viewing-sda-extensions-in-health-insight)
+* [Clinical Viewer](#viewing-sda-extensions-in-clinical-viewer)
+* [Technical Overview](#technical-Overview)
+* [Class Reference](#class-reference)
 
 # SDA Extension Tool (SETI)
 The SDA Extension Tool (shortnamed SETI) extends SDA and then propagates extensions to Clinical Viewer and Health Insight. 
@@ -63,9 +63,9 @@ E - **Reset SDA & Patients**: One button click to delete all the SDA extensions 
 3 - **Infotype**, 4 - **Date Property**, 5 - **Matchings**: Basic streamlet data to communicate with Health Insight and Clinical Viewer. <br> ( These are the conventional defaults, if you do not care about streamlets: Infotype: PRC || DateProperty: EnteredOn || Matchings: PRC/EnteredOn. ) <br>
 <a href=""><img src="screenshots/sda-studio/3.png" height="400"></a> <br>
 ## C - Custom SDA Property
-1 - **SDA**: The Custom SDA to add the property to. <br>
-2 - **Property Name**: The name of the property. <br>
-3- **Property Type**: The type of the property. <br>
+1 - **SDA**: The Custom SDA to add a sub-field to. <br>
+2 - **Property Name**: The name of the sub-field. <br>
+3- **Property Type**: The type of the sub-field. <br>
 <a href=""><img src="screenshots/sda-studio/4.png" height="400"></a> <br>
 ## D - Dashboard
 Three different dashboard are selectable from the "Select Dashboard" dropdown for the forms that we looked at in A - C.
@@ -73,7 +73,7 @@ Three different dashboard are selectable from the "Select Dashboard" dropdown fo
 ## E - Reset SDA & Patients
 There is a button in the top right to Reset SDA & Patients. The reason why we also delete all the patients is because it can cause problems if a patient exists in the enviroment with SDA extension fields and then those SDA extensions are deleted before the patient is deleted. 
 
-# Adding Patients with SDA Extensions
+# Importing Patients with SDA Extensions
 ## Extend SDA
 Add an &lt;Extension&gt; tag before adding the tag for the extension. <br>
 <a href=""><img src="screenshots/patient/1.png" width="500"></a>
@@ -81,8 +81,8 @@ Add an &lt;Extension&gt; tag before adding the tag for the extension. <br>
 Requires a "Z" before the name of the custom SDA. This avoids conflicts with already existing fields. <br>
 <a href=""><img src="screenshots/patient/2.png" width="500"></a>
 ## Test Patient
-In the test folder, we have provided patient files. They can be imported by moving them into the UCR/Data/HSEDGE1/SDAIn/. 
-<br> If the test folder is moved into UCR/Data/, then patients can be imported using the following: 
+In the [SETI Test Patient](https://github.com/lak882/seti-test-patient) repository, we have provided patient files. They can be imported by moving them into the {UCR folder}/Data/HSEDGE1/SDAIn/. 
+<br> If you move the patients into a new folder called {UCR folder}/Data/Test, then patients can be imported using the following: 
 ```
 HSCUSTOM> do ##class(Demo.Patient).TestPatient("Base")
 HSCUSTOM> do ##class(Demo.Patient).TestPatient("Final")
@@ -117,7 +117,7 @@ HSCUSTOM> do ##class(SETI.Helper).RestartProductions()
 <a href=""><img src="screenshots/hi/2.png" height="400"></a>
 
 # Viewing SDA Extensions in Clinical Viewer 
-Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://github.com/lak882/seti-viewer)
+Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://openexchange.intersystems.com/package/SETI-Viewer-1)
 ## Extend SDA
 SDA Studio will automatically create a transform that can be applied to a column. We do not automatically add a column, because that interfers with Layout Editor customization we felt was best left up to the user. The following steps show how to apply that transform to a column and change the name of a column. We use the example of adding **"Sneeziness" to "Allergies"**. <br> <br>
 1 - Navigate to a patient in the Clinical Viewer. <br>
@@ -252,10 +252,10 @@ Delete the transformations from TrakCare.
 Reset the Clinical Viewer enviroment.
 
 ## For SDA Studio
-* **SETI.CSP.SDAStudio** <br>
+### SETI.CSP.SDAStudio <br>
 When you click on SDA Studio in the Managment Portal, this is the CSP page that is called. During the setup, it overwrites the XData to include an iframe containing the link to the web app for SDA Studio. The code for the Managment Portal header is readily availible in other CSP pages. So having the angular page inside a CSP page means we can just copy the code for the Managment Portal from another CSP page.
 
-* **SETI.Objects.CustomObject // SETI.Objects.ExtensionObject // SETI.Objects.PropertyObject** <br>
+### SETI.Objects.CustomObject // SETI.Objects.ExtensionObject // SETI.Objects.PropertyObject <br>
 These are persistent objects that store the data for SDA extensions created in SDA Studio. They are the data that is being called when you look at the dashboard in SDA Studio.
 
 
