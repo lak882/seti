@@ -1,9 +1,9 @@
-<h1>
+<h1 aling="center">
   <br>
   <a href=""><img src="logo/Logo_h256.png" height="100"></a>
 </h1>
 
-<h4>An easy to use SDA extension UI</h4>
+<h4 align="center">An easy to use SDA extension UI</h4>
       
 * [Quick Start Guide](#quick-start-guide)
 * [SDA Studio](#sda-studio)
