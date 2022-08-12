@@ -1,4 +1,4 @@
-<h1 aling="center">
+<h1 align="center">
   <br>
   <a href=""><img src="logo/Logo_h256.png" height="100"></a>
 </h1>
