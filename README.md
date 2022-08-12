@@ -7,7 +7,7 @@
       
 * [Quick Start Guide](#quick-start-guide)
 * [SDA Studio](#sda-studio)
-* [Adding Patients](#adding-patients-with-sda-extensions)
+* [Importing Patients](#importing-patients-with-sda-extensions)
 * [Health Insight](#viewing-sda-extensions-in-health-insight)
 * [Clinical Viewer](#viewing-sda-extensions-in-clinical-viewer)
 * [Technical Overview](#technical-Overview)
@@ -73,7 +73,7 @@ Three different dashboard are selectable from the "Select Dashboard" dropdown fo
 ## E - Reset SDA & Patients
 There is a button in the top right to Reset SDA & Patients. The reason why we also delete all the patients is because it can cause problems if a patient exists in the enviroment with SDA extension fields and then those SDA extensions are deleted before the patient is deleted. 
 
-# Adding Patients with SDA Extensions
+# Importing Patients with SDA Extensions
 ## Extend SDA
 Add an &lt;Extension&gt; tag before adding the tag for the extension. <br>
 <a href=""><img src="screenshots/patient/1.png" width="500"></a>
@@ -81,8 +81,8 @@ Add an &lt;Extension&gt; tag before adding the tag for the extension. <br>
 Requires a "Z" before the name of the custom SDA. This avoids conflicts with already existing fields. <br>
 <a href=""><img src="screenshots/patient/2.png" width="500"></a>
 ## Test Patient
-In the test folder, we have provided patient files. They can be imported by moving them into the UCR/Data/HSEDGE1/SDAIn/. 
-<br> If the test folder is moved into UCR/Data/, then patients can be imported using the following: 
+In the [SETI Test Patient](https://github.com/lak882/seti-test-patient) repository, we have provided patient files. They can be imported by moving them into the {name of UCR instance}/Data/HSEDGE1/SDAIn/. 
+<br> If you move the patients into a new folder {name of UCR instance}/Data/Test, then patients can be imported using the following: 
 ```
 HSCUSTOM> do ##class(Demo.Patient).TestPatient("Base")
 HSCUSTOM> do ##class(Demo.Patient).TestPatient("Final")
