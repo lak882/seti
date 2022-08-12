@@ -5,13 +5,13 @@
 
 <h4>An easy to use SDA extension UI</h4>
       
-* <a href="#quick-start-guide">Quick Start</a> <br>
-* <a href="#sda-studio">SDA Studio</a> <br>
-* <a href="#adding-patients-with-sda-extensions">Adding Patients</a> <br>
-* <a href="#viewing-sda-extensions-in-health-insight">Health Insight</a> <br>
-* <a href="#viewing-sda-extensions-in-clinical-viewer">Clinical Viewer</a> <br>
-* <a href="#technical-overview">Technical Overview</a> <br>
-* <a href="#class-reference">Class Reference</a>
+* [Quick Start Guide](#quick-start-guide)
+* [SDA Studio](#sda-studio)
+* [Adding Patients](#adding-patients-with-sda-extensions)
+* [Health Insight](#viewing-sda-extensions-in-health-insight)
+* [Clinical Viewer](#viewing-sda-extensions-in-clinical-viewer)
+* [Technical Overview](#technical-Overview)
+* [Class Reference](#class-reference)
 
 # SDA Extension Tool (SETI)
 The SDA Extension Tool (shortnamed SETI) extends SDA and then propagates extensions to Clinical Viewer and Health Insight. 
