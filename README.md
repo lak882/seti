@@ -252,10 +252,10 @@ Delete the transformations from TrakCare.
 Reset the Clinical Viewer enviroment.
 
 ## For SDA Studio
-* **SETI.CSP.SDAStudio** <br>
+* ### SETI.CSP.SDAStudio <br>
 When you click on SDA Studio in the Managment Portal, this is the CSP page that is called. During the setup, it overwrites the XData to include an iframe containing the link to the web app for SDA Studio. The code for the Managment Portal header is readily availible in other CSP pages. So having the angular page inside a CSP page means we can just copy the code for the Managment Portal from another CSP page.
 
-* **SETI.Objects.CustomObject // SETI.Objects.ExtensionObject // SETI.Objects.PropertyObject** <br>
+* ### SETI.Objects.CustomObject // SETI.Objects.ExtensionObject // SETI.Objects.PropertyObject <br>
 These are persistent objects that store the data for SDA extensions created in SDA Studio. They are the data that is being called when you look at the dashboard in SDA Studio.
 
 
