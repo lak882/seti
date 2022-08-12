@@ -63,9 +63,9 @@ E - **Reset SDA & Patients**: One button click to delete all the SDA extensions 
 3 - **Infotype**, 4 - **Date Property**, 5 - **Matchings**: Basic streamlet data to communicate with Health Insight and Clinical Viewer. <br> ( These are the conventional defaults, if you do not care about streamlets: Infotype: PRC || DateProperty: EnteredOn || Matchings: PRC/EnteredOn. ) <br>
 <a href=""><img src="screenshots/sda-studio/3.png" height="400"></a> <br>
 ## C - Custom SDA Property
-1 - **SDA**: The Custom SDA to add the property to. <br>
-2 - **Property Name**: The name of the property. <br>
-3- **Property Type**: The type of the property. <br>
+1 - **SDA**: The Custom SDA to add a sub-field to. <br>
+2 - **Property Name**: The name of the sub-field. <br>
+3- **Property Type**: The type of the sub-field. <br>
 <a href=""><img src="screenshots/sda-studio/4.png" height="400"></a> <br>
 ## D - Dashboard
 Three different dashboard are selectable from the "Select Dashboard" dropdown for the forms that we looked at in A - C.
