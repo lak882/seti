@@ -117,7 +117,7 @@ HSCUSTOM> do ##class(SETI.Helper).RestartProductions()
 <a href=""><img src="screenshots/hi/2.png" height="400"></a>
 
 # Viewing SDA Extensions in Clinical Viewer 
-Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://github.com/lak882/seti-viewer)
+Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://openexchange.intersystems.com/package/SETI-Viewer-1)
 ## Extend SDA
 SDA Studio will automatically create a transform that can be applied to a column. We do not automatically add a column, because that interfers with Layout Editor customization we felt was best left up to the user. The following steps show how to apply that transform to a column and change the name of a column. We use the example of adding **"Sneeziness" to "Allergies"**. <br> <br>
 1 - Navigate to a patient in the Clinical Viewer. <br>
