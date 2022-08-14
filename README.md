@@ -94,7 +94,7 @@ HSCUSTOM> do ##class(Demo.Patient).TestPatient("Delete")
 2 - A custom SDA called "Transplant" with default streamlets (PCR, EnteredOn, PCR/EnteredOn). <br>
 3 - Custom properties on "Transplant" called "OrganType" of type "%String" and "NetPrice" of type "Numeric". <br>
 **TestPatient_Delete** will delete the test patient. <br> <br>
-Both the TestPatient_Base and TestPatient_Final individually. TestPatient_Final can also be used to add extensions onto TestPatient_Base. This is accomplished by importing TestPatient_Base, then adding the extensions in SDA Studio, then importing TestPatient_Final. <br>
+Both the TestPatient_Base and TestPatient_Final can be imported individually. TestPatient_Final can also be used to add extensions onto TestPatient_Base. This is accomplished by importing TestPatient_Base, then adding the extensions in SDA Studio, then importing TestPatient_Final. <br>
 ## Delete Patients
 Patients can be deleted at any time. To delete all the patients run the following:
 ```
