@@ -40,8 +40,8 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 1. Add your extensions in SDA Studio.
 2. Add a patient with those extensions.
 3. View your extensions in Health Insight and Clinical Viewer. <br>
-[Installation Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EV6xlK9pzlVPhzNklJlHrCwB7MavZXa29RJdVo2n0E4O8A?e=NF895j) <br>
-[Demo Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A)
+* [Installation Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EV6xlK9pzlVPhzNklJlHrCwB7MavZXa29RJdVo2n0E4O8A?e=NF895j) <br>
+* [Demo Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A)
 
 # SDA Studio  
 Once you've installed SETI, you will be able to view SDA Studio in the Managment Portal. In UCR navigate to "HealthShare Managment" -> "HSREGISTRY" -> "Registry Managment" -> "SDA Studio".  <br>
