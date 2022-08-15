@@ -194,21 +194,31 @@ The Technical Overview describes what is generated when you use SDA Studio. Comp
 # Setup Overview
 The Technical Overview describes all the changes that are made to HealthShare when you run zpm. 
 ## zpm "install seti"
-Module.xml: <br>
+### Module.xml
 * Imports SETI package into HSCUSTOM
 * REST Api "/dispatch" that communicates with SETI.Disaptch
 * Page on "/seti" that displays angular app in {UCR folder}/CSP/sda-studio
 * Imports sda-studio into {UCR folder}/CSP/sda-studio <br>
-SETI.Install: <br>
+### SETI.Install
 * Map SETI.CSP to HSREGISTRY
 * Map customsda global to HSANALYTICS
 * Recompile SETI.CSP in HSREGISTRY
 * Add SDAStudio option to GetRegistryManagment() in HS.UI.Home, if it hasn't been added yet.
 * Edit path of of "/seti" page to link to {UCR folder}/CSP/sda-studio/dist/sda-studio, which is the ng build version of seti. <br>
-SETI.Ports: <br>
+### SETI.Ports
 * Set ^ucrPort and ^viewerPort globals
 * Change XData of SETI.CSP.SDAStudio to call CSP page using ^ucrPort
-
+## zpm "install seti-viewer"
+## Module.xml
+* Imports SETI package into HSCUSTOM
+* Import SETI.Viewer package into HSCUSTOM
+* REST Api "/dispatch" that communicates with SETI.Dispatch
+## SETIViewer.Setup.Install
+### Mappings
+* Map SETIViewer to HSVIEWER
+* Map ^extension global to HSVIEWER
+* Recompile SETI.Viewer in HSVIEWER
+* Rest Api "/dispatchviewer" that communicates with SETIViewer.DispatchViewer
 
 # Class Reference
 There are two main packages: **SETI & SETIViewer**. SETI is availible in both UCR and Viewer. SETIViewer is only availible in Viewer. <br> <br>
