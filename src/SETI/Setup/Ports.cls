@@ -18,7 +18,7 @@ ClassMethod SetPorts()
     set xdata = sdaStudio.XDatas.GetAt(1).Data
 
     set newStream = ##class(%Stream.TmpCharacter).%New()
-    do newStream.WriteLine("<page xmlns=""http://www.intersystems.com/zen"" title=""SETI"">")
+    do newStream.WriteLine("<page xmlns=""http://www.intersystems.com/zen"" title=""SDA Studio"">")
     do newStream.WriteLine("<html id=""titleBar"" OnDrawContent=""DrawTitle""/>")
     do newStream.WriteLine("<iframe width=""100%"" height=""100%"" src=""http://localhost:" _ ^ucrPort  _ "/seti/index.html"" frameBorder=""0"" id=""display""></iframe>")
     do newStream.WriteLine("</page>")
