@@ -35,7 +35,7 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 ### Requirements
 * [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) installed 
 * HealthShare with appropriate license (2021.2 or below)
-* Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://github.com/lak882/seti-viewer)
+* Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://openexchange.intersystems.com/package/SETI-Viewer-1)
 ### Usage
 1. Add your extensions in SDA Studio.
 2. Add a patient with those extensions.
