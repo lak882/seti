@@ -10,7 +10,8 @@
 * [Importing Patients](#importing-patients-with-sda-extensions)
 * [Health Insight](#viewing-sda-extensions-in-health-insight)
 * [Clinical Viewer](#viewing-sda-extensions-in-clinical-viewer)
-* [Technical Overview](#technical-Overview)
+* [Technical Overview](#technical-overview)
+* [Setup Overview](#setup-overview)
 * [Class Reference](#class-reference)
 
 # SDA Extension Tool (SETI)
@@ -189,6 +190,25 @@ The Technical Overview describes what is generated when you use SDA Studio. Comp
 **If Clinical Viewer:**<br>
 * All the non-Health Insight changes are also done in Viewer.
 * The data class, CSP page and CSP caller method are recreated to include the new property. 
+
+# Setup Overview
+The Technical Overview describes all the changes that are made to HealthShare when you run zpm. 
+## zpm "install seti"
+Module.xml: <br>
+* Imports SETI package into HSCUSTOM
+* REST Api "/dispatch" that communicates with SETI.Disaptch
+* Page on "/seti" that displays angular app in {UCR folder}/CSP/sda-studio
+* Imports sda-studio into {UCR folder}/CSP/sda-studio <br>
+SETI.Install: <br>
+* Map SETI.CSP to HSREGISTRY
+* Map customsda global to HSANALYTICS
+* Recompile SETI.CSP in HSREGISTRY
+* Add SDAStudio option to GetRegistryManagment() in HS.UI.Home, if it hasn't been added yet.
+* Edit path of of "/seti" page to link to {UCR folder}/CSP/sda-studio/dist/sda-studio, which is the ng build version of seti. <br>
+SETI.Ports: <br>
+* Set ^ucrPort and ^viewerPort globals
+* Change XData of SETI.CSP.SDAStudio to call CSP page using ^ucrPort
+
 
 # Class Reference
 There are two main packages: **SETI & SETIViewer**. SETI is availible in both UCR and Viewer. SETIViewer is only availible in Viewer. <br> <br>
