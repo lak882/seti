@@ -192,7 +192,7 @@ The Technical Overview describes what is generated when you use SDA Studio. Comp
 * The data class, CSP page and CSP caller method are recreated to include the new property. 
 
 # Setup Overview
-The Technical Overview describes all the changes that are made to HealthShare when you run zpm. 
+The Setup Overview describes all the changes that are made to HealthShare when you run zpm. 
 ## zpm "install seti"
 ### Module.xml
 * Imports SETI package into HSCUSTOM
