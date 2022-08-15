@@ -201,7 +201,7 @@ The Setup Overview describes all the changes that are made to HealthShare when y
 * Imports sda-studio into {UCR folder}/CSP/sda-studio <br>
 ### SETI.Install
 * Map SETI.CSP to HSREGISTRY
-* Map customsda global to HSANALYTICS
+* Map ^customsda global to HSANALYTICS
 * Recompile SETI.CSP in HSREGISTRY
 * Add SDAStudio option to GetRegistryManagment() in HS.UI.Home, if it hasn't been added yet.
 * Edit path of of "/seti" page to link to {UCR folder}/CSP/sda-studio/dist/sda-studio, which is the ng build version of seti. <br>
