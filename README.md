@@ -37,8 +37,7 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 * [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) installed 
 * HealthShare with appropriate license (2021.2 or below)
 * Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://openexchange.intersystems.com/package/SETI-Viewer-1)
-### Usage
-=> [Demo Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A)
+### Usage ([Demo](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A))
 1. Add your extensions in SDA Studio.
 2. Add a patient with those extensions.
 3. View your extensions in Health Insight and Clinical Viewer. <br>
