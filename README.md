@@ -209,12 +209,11 @@ The Technical Overview describes all the changes that are made to HealthShare wh
 * Set ^ucrPort and ^viewerPort globals
 * Change XData of SETI.CSP.SDAStudio to call CSP page using ^ucrPort
 ## zpm "install seti-viewer"
-## Module.xml
+### Module.xml
 * Imports SETI package into HSCUSTOM
 * Import SETI.Viewer package into HSCUSTOM
 * REST Api "/dispatch" that communicates with SETI.Dispatch
-## SETIViewer.Setup.Install
-### Mappings
+### SETIViewer.Setup.Install
 * Map SETIViewer to HSVIEWER
 * Map ^extension global to HSVIEWER
 * Recompile SETI.Viewer in HSVIEWER
