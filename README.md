@@ -167,7 +167,7 @@ The Technical Overview describes what is generated when you use SDA Studio. Comp
 * Custom SDA streamlet called HS.Local.User.Streamlet.Z{SDA}.
 * If no container yet, a container called "HS.Local.User.ZContainer". All the lists of custom SDAs are in this class. 
 * If no container yet, registers the container in HSREGISTRY with key "\CustomSDA3Container". 
-* SETI.Objects.Custom object to displayed on the dashboard<br> <br>
+* SETI.Objects.Custom object to display on the dashboard<br> <br>
 **If Health Insight:**<br>
 * Analogous Health Insight data class called HS.Local.SDA3.{SDA}HI. 
 * Registers analogous Health Insight data class in Health Insight. <br> <br>
