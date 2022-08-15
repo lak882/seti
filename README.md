@@ -18,7 +18,6 @@ The SDA Extension Tool (shortnamed SETI) extends SDA and then propagates extensi
 
 # Quick Start Guide
 ### Installation
-[Installation Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EV6xlK9pzlVPhzNklJlHrCwB7MavZXa29RJdVo2n0E4O8A?e=NF895j)
 1. For Unified Care Record open a Terminal in the HSCUSTOM namespace.
 2. Use [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) to install SETI.
 ```
@@ -33,6 +32,7 @@ You can change the web port at any time by running:
 ```
 HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 ```
+[Installation Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EV6xlK9pzlVPhzNklJlHrCwB7MavZXa29RJdVo2n0E4O8A?e=NF895j)
 ### Requirements
 * [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) installed 
 * HealthShare with appropriate license (2021.2 or below)
