@@ -32,7 +32,6 @@ You can change the web port at any time by running:
 ```
 HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 ```
-[Installation Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EV6xlK9pzlVPhzNklJlHrCwB7MavZXa29RJdVo2n0E4O8A?e=NF895j)
 ### Requirements
 * [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) installed 
 * HealthShare with appropriate license (2021.2 or below)
@@ -41,6 +40,8 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 1. Add your extensions in SDA Studio.
 2. Add a patient with those extensions.
 3. View your extensions in Health Insight and Clinical Viewer.
+[Installation Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EV6xlK9pzlVPhzNklJlHrCwB7MavZXa29RJdVo2n0E4O8A?e=NF895j)
+[Demo Video](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A)
 
 # SDA Studio  
 Once you've installed SETI, you will be able to view SDA Studio in the Managment Portal. In UCR navigate to "HealthShare Managment" -> "HSREGISTRY" -> "Registry Managment" -> "SDA Studio".  <br>
