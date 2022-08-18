@@ -313,7 +313,7 @@ These are persistent objects that store the data for SDA extensions created in S
 
 # IRIS for Health
 SETI in theory works on IRIS for Heatlh. The only caveat is that it will not integrate SDA Studio directly into the Managment Portal. IRIS for Health does not have a HealthShare Managment tab and no HSREGISTRY CSP directory. You can access the same page as described in the SDA Studio section, except without the Managment Portal header. To open SDA Studio, visit:  http://localhost:{insert-iris-for-health-port}/seti/index.html <br>
-Clicking the Health Insight & Clinical Viewer checkboxes will not cause problems, but may create unnessecary files. These are best left untouched, if you are not using IRIS for Heatlth <br>
+Clicking the Health Insight & Clinical Viewer checkboxes will not cause problems, but may create bloated files. <br>
 You can also add new SDA extensions using the methods as described in the [Class Reference](#class-reference). Unlike HealthShare we do not need to worry about propogating to different instances. <br>
 
 
