@@ -17,6 +17,7 @@
 * [Technical Overview](#technical-overview)
 * [Setup Overview](#setup-overview)
 * [Class Reference](#class-reference)
+* [IRIS for Health](#iris-for-health)
 
 # SDA Extension Tool (SETI)
 The SDA Extension Tool (shortnamed SETI) extends SDA and then propagates extensions to Clinical Viewer and Health Insight. 
@@ -39,7 +40,8 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 ```
 ### Requirements
 * [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) installed 
-* HealthShare with appropriate license (2021.2 or below)
+* HealthShare with appropriate license (see [IRIS for Health](#iris-for-health) if using IRIS for Health)
+* SETI uses namespace naming conventions of InstallDemo() ie. HSREGISTRY, HSANALYTICS, HSVIEWER (see [Setup Overview](#setup-overview))
 * Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://openexchange.intersystems.com/package/SETI-Viewer-1)
 ### Usage ([Demo](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A))
 1. Add your extensions in SDA Studio.
@@ -111,6 +113,7 @@ After adding a patient with extensions, the Health Insight productions must be r
 ```
 HSCUSTOM> do ##class(SETI.Helper).RestartProductions()
 ```
+If you are using HealthShare version 2022.1 or above, you need to switch off the System Indexing to view patients in Health Insight. Everything else including the Clinical Viewer will work as intended regardless. 
 ## Extend SDA
 * In the SQL Explorer, search for HSAA.{SDA} with {SDA} as the extended SDA. 
 * Query that category.
@@ -291,5 +294,9 @@ When you click on SDA Studio in the Managment Portal, this is the CSP page that 
 ### SETI.Objects.CustomObject // SETI.Objects.ExtensionObject // SETI.Objects.PropertyObject <br>
 These are persistent objects that store the data for SDA extensions created in SDA Studio. They are the data that is being called when you look at the dashboard in SDA Studio.
 
+# IRIS for Health
+SETI in theory works on IRIS for Heatlh, the only caveat being that it will not integrate SDA Studio directly into the Managment Portal. <br> 
+IRIS for Health does not have a HealthShare Managment tab and no HSREGISTRY CSP directory.You can access the same page as described in the SDA Studio section, except without the Managment Portal header. To open SDA Studio, visit: http://localhost:{insert IRIS for Heatlh port number}/seti/index.html. 
+You can also add new SDA extensions using the methods as described in the [Class Reference](#class-reference).
 
 
