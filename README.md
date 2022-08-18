@@ -40,7 +40,7 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 ```
 ### Requirements
 * [ObjectScript Package Manager](https://openexchange.intersystems.com/package/ObjectScript-Package-Manager) installed 
-* HealthShare with appropriate license (see [IRIS for Health](#iris-for-health) if using IRIS for Health)
+* HealthShare with appropriate license (or see [IRIS for Health](#iris-for-health))
 * SETI uses namespace naming conventions of InstallDemo() ie. HSREGISTRY, HSANALYTICS, HSVIEWER (see [Setup Overview](#setup-overview))
 * Install to unlock Clinical Viewer functonality: [SDA Extension Tool Viewer](https://openexchange.intersystems.com/package/SETI-Viewer-1)
 ### Usage ([Demo](https://intersystemscorporation-my.sharepoint.com/:v:/g/personal/lkabelka_intersystems_com/EVTw-fv2kE5IhnDx0HdrKhwBjMAwQ_fZp1OkpCQkUeKd9A))
