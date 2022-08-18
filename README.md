@@ -50,7 +50,7 @@ HSCUSTOM> do ##class(SETI.Setup.Ports).SetPorts()
 
 # SDA Studio  
 Once you've installed SETI, you will be able to view SDA Studio in the Managment Portal. In UCR navigate to "HealthShare Managment" -> "HSREGISTRY" -> "Registry Managment" -> "SDA Studio".  <br>
-You can also go there directly by visiting http://localhost:{insert-ucr-port}/csp/healthshare/hsregistry/SETI.SDAStudio.cls. <br>
+You can also go there directly by visiting http://localhost:{insert-ucr-port}/csp/healthshare/hsregistry/SETI.SDAStudio.cls <br>
 <a href=""><img src="screenshots/sda-studio/1.png" height="400"></a> <br>
 There are five tabs on which you can edit and view SDA: <br>
 A - **Extend SDA**: Adding new sub-fields to already existing SDA fields. <br>
@@ -313,7 +313,7 @@ These are persistent objects that store the data for SDA extensions created in S
 
 # IRIS for Health
 SETI in theory works on IRIS for Heatlh. The only caveat is that it will not integrate SDA Studio directly into the Managment Portal. IRIS for Health does not have a HealthShare Managment tab and no HSREGISTRY CSP directory.<br> 
-You can access the same page as described in the SDA Studio section, except without the Managment Portal header. To open SDA Studio, visit:  http://localhost:{insert-iris-for-health-port}/seti/index.html. <br>
+You can access the same page as described in the SDA Studio section, except without the Managment Portal header. To open SDA Studio, visit:  http://localhost:{insert-iris-for-health-port}/seti/index.html <br>
 You can also add new SDA extensions using the methods as described in the [Class Reference](#class-reference). Unlike HealthShare we do not need to worry about propogating to different instances.
 
 
