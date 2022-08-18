@@ -113,7 +113,24 @@ After adding a patient with extensions, the Health Insight productions must be r
 ```
 HSCUSTOM> do ##class(SETI.Helper).RestartProductions()
 ```
-If you are using HealthShare version 2022.1 or above, you need to switch off the System Indexing to view patients in Health Insight. Everything else including the Clinical Viewer will work as intended regardless. 
+If you are using **HealthShare version 2022.1 or above**, you need to switch off the System Indexing to view patients in Health Insight. Everything else including the Clinical Viewer will work as intended regardless of wether you are using System Indexing. To turn off System Indexing, run the following in HSANALYTICS:
+```
+HSANALYTICS> do ##class(HSAA.API.Config).SetHIDataFeed()
+Health Insight data feed mechanism is currently set to "System Index"
+ 
+Do you want to configure it differently?
+Enter yes (or y) to configure or no (or n) to quit: y
+ 
+==== Set up the data feed mechnism for Health Insight ====
+ 
+ 
+ 
+*** Please select either AADBQ or System Index by entering 0 or 1 only:
+0: AADBQ
+1: System Index
+Enter 0 or 1 to set up, or q to quit: 0
+```
+
 ## Extend SDA
 * In the SQL Explorer, search for HSAA.{SDA} with {SDA} as the extended SDA. 
 * Query that category.
