@@ -138,7 +138,7 @@ Enter 0 or 1 to set up, or q to quit: 0
 <a href=""><img src="screenshots/hi/1.png" height="400"></a>
 ## Custom SDA
 * In the SQL Explorer, search for HS_Local*
-* Query the field that's called HS_Local.Z{SDA}HI with {SDA} as the custom SDA. <br>
+* Query the field that's called HS_Local_User.Z{SDA}HI with {SDA} as the custom SDA. <br>
 <a href=""><img src="screenshots/hi/2.png" height="400"></a>
 
 # Viewing SDA Extensions in Clinical Viewer 
