@@ -328,7 +328,7 @@ An outline of what could be improved on in SETI. The current version of SETI sho
 * HSREGISTRY was not the best place to put SDA Studio. This is what limits the functonality in IRIS for Health. Instead, put it in the Interopertability tab for all namespaces. Then have the CSP page in the USER namespace.
 * Namespaces like HSREGISTRY, HSANALYTICS, HSVIEWER should not be hardcoded. Instead, we can prompt the user to enter them.
 * The naming of the current tabs is unintuitive. At least we should change Extend SDA to Base SDA Property. Just so it fits in with the rest. 
-* Add mmultiple properties at the same time. We can simplify the current layout. WE can just have it be one long row. Then you can click a plus-sign to create a new property. 
+* Add multiple properties at the same time. We can simplify the current layout. WE can just have it be one long row. Then you can click a plus-sign to create a new property. 
 * Make it scalable. If we have clients that have THOUSANDS of SDA Extensions, then we should actually make extending the SDA at that scale supported. When you add SDA extenions you should be able to add at least 10 at a time. The dashboard should be sorted into different pages with a searchbar. Sort it alphabetically and everything.
 * Extensions added to a SDA-to-ReportSectionScan XSL file so that it can be added to a Patient Summary.
 * Integration with source control. Could be another tab, a source control tab, so that its easier to go back.
