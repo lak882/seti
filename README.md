@@ -336,3 +336,4 @@ An outline of what could be improved on in SETI. The current version of SETI sho
 * Seperate Delete All Patients and Reset SDA. While in this documentation I've said that you need to delete all patients before deleting the custom SDA I'm not sure if this is actually ture. 
 * Ability to promote a set of schema changes from DEV-TEST-STAGE-PROD.
 * For fields of type %String, any ability to specify a MAXLEN, to avoid a default of 50.
+* HealthShare Docker integration for the zpm package. 
