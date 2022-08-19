@@ -18,6 +18,7 @@
 * [Setup Overview](#setup-overview)
 * [Class Reference](#class-reference)
 * [IRIS for Health](#iris-for-health)
+* [SETI Version 2](#seti-version-2)
 
 # SDA Extension Tool (SETI)
 The SDA Extension Tool (shortnamed SETI) extends SDA and then propagates extensions to Clinical Viewer and Health Insight. 
@@ -313,7 +314,25 @@ These are persistent objects that store the data for SDA extensions created in S
 
 # IRIS for Health
 SETI in theory works on IRIS for Heatlh. The only caveat is that it will not integrate SDA Studio directly into the Managment Portal. IRIS for Health does not have a HealthShare Managment tab and no HSREGISTRY CSP directory. You can access the same page as described in the SDA Studio section, except without the Managment Portal header. To open SDA Studio, visit:  http://localhost:{insert-iris-for-health-port}/seti/index.html <br>
-Clicking the Health Insight & Clinical Viewer checkboxes will not cause problems, but may create bloated files. <br>
+Clicking the Health Insight & Clinical Viewer checkboxes will not cause problems, but may create bloated files. There is no Heatlh Insight & Clinical Viewer for IRIS for Health. <br>
 You can also add new SDA extensions using the methods as described in the [Class Reference](#class-reference). Unlike HealthShare we do not need to worry about propogating to different instances. <br>
 
-
+# SETI Version 2
+An outline of what could be improved on in SETI. The current version of SETI should be modified as what is nessecary for any use case. But in the future, unless SETI has been replaced, it would be good to do a full overhaul to create a better version of SETI. The main focus would be making it more scalable than it was before. We've made it easy for customers to add extensions quickly, but we want to make it even faster & consolidate any extra steps into SETI.
+* Allowing for concatenated data types. The effect that we want to achieve is that you can add a sub-field to a sub-field. There are three data types in the docs that we haven't added: 1. exisiting HS serial classes. 2. custom serial classes (extend HS.SDA3.DataType) 3. code tables (extend HS.SDA3.CodeTableTranslated). For our purposes, we should get custom serial classes working. This would mean we need to add a new tab that allows the user to add new serial classes. Call it Property Editor.
+* A Clinical Viewer Custom SDA editor. Instead of having a Clinical Viewer checkbox for custom SDA, we have a whole seperate page for editing custom SDA. 1. We would need something that can specify the order of columns (drop-down that says 1-20 perhaps). 2. Display non-custom properties ie. EnteredOn. 3. 
+* Turn boolean from 0 or 1 to False or True in Clinical Viewer. 
+* Keep track of the extensions users make. This would require a seperate logging system, but this would be good to keep track of the SDA extension users actually made.
+* Map from different data models. Mostly everyone wants FHIR functonality. So perhaps a FHIR tab that allows mapping between new SDA extensions and FHIR. 
+* Custom SDA tabs in the Clinical Viewer could look better. I hesitate, because Clinical Viewer is written in Angular. You could embede a Angular page inside CSP. But this is inpractical, since you dynamically edit Angular pages done with ng build. Instead, I would just copy-paste styles until it looks nicer.
+* HSREGISTRY was not the best place to put SDA Studio. This is what limits the functonality in IRIS for Health. Instead, put it in the Interopertability tab for all namespaces. Then have the CSP page in the USER namespace.
+* Namespaces like HSREGISTRY, HSANALYTICS, HSVIEWER should not be hardcoded. Instead, we can prompt the user to enter them.
+* The naming of the current tabs is unintuitive. At least we should change Extend SDA to Base SDA Property. Just so it fits in with the rest. 
+* Add mmultiple properties at the same time. We can simplify the current layout. WE can just have it be one long row. Then you can click a plus-sign to create a new property. 
+* Make it scalable. If we have clients that have THOUSANDS of SDA Extensions, then we should actually make extending the SDA at that scale supported. When you add SDA extenions you should be able to add at least 10 at a time. The dashboard should be sorted into different pages with a searchbar. Sort it alphabetically and everything.
+* Extensions added to a SDA-to-ReportSectionScan XSL file so that it can be added to a Patient Summary.
+* Integration with source control. Could be another tab, a source control tab, so that its easier to go back.
+* Deleting all patients does not always work. This is because it will throw an error if streamlets still exist. This can be refined if we do a DisplayError() on the status of DeleteAll and then doing an SDADelete on the MRN of the patient that is causing the error. Not sure why this does not work. Also HS.Gateway.ECR.PatientDelete is good too. 
+* Seperate Delete All Patients and Reset SDA. While in this documentation I've said that you need to delete all patients before deleting the custom SDA I'm not sure if this is actually ture. 
+* Ability to promote a set of schema changes from DEV-TEST-STAGE-PROD.
+* For fields of type %String, any ability to specify a MAXLEN, to avoid a default of 50.
