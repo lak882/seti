@@ -17,7 +17,7 @@
       <Resource Name="SETI.PKG"/>
 
       <!-- REST Api -->
-      <CSPApplication 
+      <WebApplicaton 
         Url="/dispatch"
         MatchRoles=":%All"
         PasswordAuthEnabled="0"
@@ -28,7 +28,7 @@
       />
 
       <!-- CSP page that we view SETI on-->
-      <CSPApplication
+      <WebApplicaton
         Url="/seti"
         MatchRoles=":%All"
         SourcePath="/src/sda-studio"
